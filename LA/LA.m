@@ -14,13 +14,13 @@ V(end, 2:ny-1) = 0; % Bottom boundary (insulating)
 SidesToZero = 1;
 
 for k = 1:ni
-    for i = 2:nx-1
-        for j = 2:ny-1
+%    for i = 2:nx-1
+%        for j = 2:ny-1
             % Finite difference iteration
             %V(i, j) = 0.25 * (V(i+1, j) + V(i-1, j) + V(i, j+1) + V(i, j-1));
             
-        end
-    end
+%        end
+%    end
 V=imboxfilt(V,3)
     % Reset boundary conditions
     V(1:nx, 1) = 1; % Left boundary
